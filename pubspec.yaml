@@ -13,6 +13,9 @@ dependencies:
   dart_mysql: ^0.0.1
   shelf_router: ^1.1.2
   build_runner: ^2.1.7
+  hex: ^0.2.0
+  intl: ^0.17.0
+  diacritic: ^0.1.3
 
 dev_dependencies:
   functions_framework_builder: ^0.4.0
