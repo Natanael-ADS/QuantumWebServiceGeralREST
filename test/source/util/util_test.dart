@@ -23,16 +23,16 @@ void main() {
   });
 
   test('util.getDate ...', () async {
-    var result = Util.getDate("21/12/2021", Const.FORMATO_DATA);
+    var result = Util.getDate("21/12/2021", Const.FORMATO_DATE);
     expect(result.toString(), "2021-12-21 00:00:00.000");
 
-    result = Util.getDate("21/12/2021 13:15:00", Const.FORMATO_DATA_HORA);
+    result = Util.getDate("21/12/2021 13:15:00", Const.FORMAT_DATE_TIME);
     expect(result.toString(), "2021-12-21 13:15:00.000");
 
-    result = Util.getDate("2021-12-21 ", Const.FORMATO_DATA_BD);
+    result = Util.getDate("2021-12-21 ", Const.FORMAT_DATE_BD);
     expect(result.toString(), "2021-12-21 00:00:00.000");
 
-    result = Util.getDate("2021-12-21 13:15:00", Const.FORMATO_DATA_HORA_BD);
+    result = Util.getDate("2021-12-21 13:15:00", Const.FORMAT_DATE_TIME_BD);
     expect(result.toString(), "2021-12-21 13:15:00.000");
   });
 
@@ -61,7 +61,7 @@ void main() {
   });
 
   test('util.removeAcentos ...', () async {
-    var result = Util.removeAcentos("Natanael Cândido é amigão");
+    var result = Util.removeAccents("Natanael Cândido é amigão");
 
     expect(result, "Natanael Candido e amigao");
   });

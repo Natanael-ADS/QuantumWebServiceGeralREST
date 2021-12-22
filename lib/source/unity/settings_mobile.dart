@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-class ConfigMobile {
+class SettingsMobile {
   String imei = "";
   String tipo = "";
   String value = "";
 
-  ConfigMobile({
+  SettingsMobile({
     required this.imei,
     required this.tipo,
     required this.value,
@@ -19,8 +19,8 @@ class ConfigMobile {
     };
   }
 
-  factory ConfigMobile.fromMap(Map<String, dynamic> map) {
-    return ConfigMobile(
+  factory SettingsMobile.fromMap(Map<String, dynamic> map) {
+    return SettingsMobile(
       imei: map['imei'] ?? '',
       tipo: map['tipo'] ?? '',
       value: map['value'] ?? '',
@@ -29,7 +29,7 @@ class ConfigMobile {
 
   String toJson() => json.encode(toMap());
 
-  factory ConfigMobile.fromJson(String source) {
-    return ConfigMobile.fromMap(json.decode(source));
+  factory SettingsMobile.fromJson(String source) {
+    return SettingsMobile.fromMap(json.decode(source));
   }
 }

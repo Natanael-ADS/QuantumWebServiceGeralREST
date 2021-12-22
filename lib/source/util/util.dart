@@ -28,7 +28,7 @@ class Util {
   }
 
   static String getStringFromDate(DateTime date) {
-    return DateFormat(Const.FORMATO_DATA_HORA).format(date);
+    return DateFormat(Const.FORMAT_DATE_TIME).format(date);
   }
 
   static DateTime strToDate(String data) {
@@ -37,7 +37,7 @@ class Util {
         data = data.split(".")[0];
       }
 
-      DateFormat formatter = DateFormat(Const.FORMATO_DATA);
+      DateFormat formatter = DateFormat(Const.FORMATO_DATE);
       DateTime date = formatter.parse(data);
       return date;
     } on Exception catch (e) {
@@ -76,7 +76,7 @@ class Util {
     return number;
   }
 
-  static DateTime getDataAtual() {
+  static DateTime getDateTimeCurrent() {
     return DateTime.now();
   }
 
@@ -94,7 +94,7 @@ class Util {
     return valueToPad;
   }
 
-  static String removeAcentos(String texto) {
+  static String removeAccents(String texto) {
     try {
       texto = removeDiacritics(texto);
       return texto;
